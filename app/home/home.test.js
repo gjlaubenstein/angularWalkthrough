@@ -6,7 +6,7 @@ describe('ngWalkthrough.home module', function() {
 
   describe('home controller', function(){
 
-    it('should ....', inject(function($controller) {
+    it('should load the home controller', inject(function($controller) {
       //spec body
       var homeController = $controller('HomeController');
       expect(homeController).toBeDefined();
