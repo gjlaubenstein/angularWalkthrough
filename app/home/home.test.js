@@ -5,12 +5,17 @@ describe('ngWalkthrough.home module', function () {
     beforeEach(module('ngWalkthrough.home'));
 
     describe('home controller', function () {
-
-        it('should load the home controller', inject(function ($controller) {
-            //spec body
-            var homeController = $controller('HomeController');
-            expect(homeController).toBeDefined();
-            expect(homeController.story).toContain("Collaboratively administrate");
+        var homeController;
+        beforeEach(inject(function ($controller) {
+            homeController = $controller('HomeController');
         }));
+
+        it('should load the home controller', function () {
+            expect(homeController).toBeDefined();
+        });
+
+        it('should load the story', function () {
+            expect(homeController.story).toContain("Collaboratively administrate");
+        });
     });
 });
