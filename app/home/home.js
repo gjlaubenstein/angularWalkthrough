@@ -17,4 +17,9 @@ homeController.$inject = ['storyService'];
 function homeController(storyService) {
     var vm = this;
     vm.story = storyService.getStory();
+    vm.countWords = countWords;
+    
+    function countWords() {
+        return vm.story.split(' ').length;
+    }
 }

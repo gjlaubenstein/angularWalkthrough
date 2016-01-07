@@ -17,5 +17,13 @@ describe('ngWalkthrough.home module', function () {
         it('should load the story', function () {
             expect(homeController.story).toContain("Collaboratively administrate");
         });
+        
+        it('should count all of the words in the story', function() {
+           var story = "this is a story.";
+           homeController.story = story;
+           var totalWords = homeController.countWords(); 
+           
+           expect(totalWords).toEqual(4);
+        });
     });
 });

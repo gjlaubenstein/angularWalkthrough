@@ -22,6 +22,11 @@ describe('my app', function() {
        expect(element.all(by.css('[ng-view] .story')).first().getText()).
          toContain("Collaboratively administrate");
     });
+    
+    it('should render the total words', function() {
+       expect(element.all(by.css('[ng-view] .totalWords')).first().getText()).
+        toMatch(/Word Count: [0-9]+/); 
+    });
 
   });
 });
