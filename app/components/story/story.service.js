@@ -2,7 +2,7 @@
 
 angular
     .module('ngWalkthrough.story', [])
-    .service('story', story);
+    .service('storyService', story);
     
 function story() {
     var story = {
