@@ -16,5 +16,5 @@ homeController.$inject = ['storyService'];
 
 function homeController(storyService) {
     var vm = this;
-    
+    vm.story = storyService.getStory();
 }
